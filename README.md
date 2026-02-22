@@ -1,75 +1,67 @@
-AI-Powered Resume Screener (CVNLP)
+# AI-Powered Resume Screener (CVNLP)
 
-An intelligent resume parsing and ranking system that automates candidate shortlisting using hybrid semantic + keyword scoring with explainable AI outputs.
+Automated resume parsing and candidate ranking using hybrid semantic + keyword scoring with explainable AI outputs.
 
-Overview
+---
 
-Manual resume screening is slow, inconsistent, and keyword-heavy systems miss contextual relevance.
+## Problem
 
-CVNLP addresses this by combining:
+Manual resume screening is slow and inconsistent.  
+Keyword-only systems miss contextual skill relevance.
 
-Structured resume parsing
+---
 
-Semantic similarity modeling
+## Solution
 
-Weighted ranking logic
+CVNLP combines structured parsing with semantic similarity modeling to produce context-aware, interpretable candidate rankings.
 
-Explainable suitability scoring
+---
 
-The system improves contextual matching between resumes and job descriptions while maintaining interpretability.
+## Architecture
 
-Core Architecture
+Resume (PDF/DOCX)  
+→ Text Extraction (PyMuPDF / docx2txt)  
+→ NLP Preprocessing  
+→ Hybrid Scoring  
+   • Keyword Matching  
+   • SentenceTransformer Embeddings  
+→ Weighted Ranking  
+→ GPT-based Explainability  
 
-Resume (PDF/DOCX)
-→ Text Extraction (PyMuPDF / docx2txt)
-→ NLP Preprocessing
-→ Hybrid Scoring Engine
-  • Keyword Matching
-  • SentenceTransformer Embeddings
-→ Weighted Ranking
-→ GPT-based Explainability
+---
 
-Key Features
+## Core Features
 
-Automated PDF & DOCX resume parsing
+- Automated PDF & DOCX parsing  
+- Hybrid semantic + keyword scoring  
+- Context-aware ranking  
+- Skill gap identification  
+- Modular ML-ready pipeline  
 
-Hybrid semantic + keyword scoring
+---
 
-Context-aware candidate ranking
-
-Skill gap identification
-
-Modular ML-ready architecture
-
-Tech Stack
-
-Python · NLP/NER · SentenceTransformers · GPT · PyMuPDF · docx2txt
-
-Scoring Logic
+## Scoring Model
 
 Final Score = α(Keyword Score) + β(Semantic Similarity)
 
-Hybrid scoring improves contextual relevance compared to keyword-only baselines.
+Improves contextual relevance vs keyword-only baselines.
 
-Why This Matters
+---
 
-Reduces manual screening time
+## Tech Stack
 
-Improves ranking consistency
+Python · PyMuPDF · docx2txt · NLP/NER  
+SentenceTransformers · GPT  
 
-Captures semantic skill equivalence (e.g., “ML” ≈ “Machine Learning”)
+---
 
-Maintains explainability for recruiter trust
+## Impact
 
-Future Extensions
+- Reduces screening time  
+- Improves ranking consistency  
+- Maintains explainability for recruiter trust  
 
-FastAPI deployment
+---
 
-Batch ranking pipeline
-
-Recruiter analytics dashboard
-
-Fine-tuned domain-specific embeddings
-
-Author: Jitender Singh
-B.Tech CSE
+**Author:** Jitender Singh  
+B.Tech Computer Science & Engineering
